@@ -21,6 +21,8 @@ UDP transport layer with FastAPI-like route decorators and QUIC-inspired transpo
 - UDP congestion control
 - UDP based hole punching
 
+ - JWT BASED CRYPTO HANDSHAKE
+
 ## Run
 
 ```bash
