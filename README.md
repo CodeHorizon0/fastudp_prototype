@@ -22,11 +22,12 @@ UDP transport layer with FastAPI-like route decorators and QUIC-inspired transpo
 - Session control
 
 
-## Later
+## Banger features
 
 - JWT BASED CRYPTO HANDSHAKE IN RTT0
 - Reliable & Unreliable transport mode
 - UDP based hole punching
+- Anti DPI complex of bypassing methods
 
 ## Run
 
