@@ -2,7 +2,7 @@
 
 UDP transport layer with FastAPI-like route decorators and QUIC-inspired transport features.
 
-Included transport features:
+## Included transport features:
 - asyncio datagram transport
 - binary packets
 - PSK handshake
@@ -14,6 +14,12 @@ Included transport features:
 - session resumption tickets
 - packet acknowledgments
 - FastAPI-like route decorators
+
+## Planned features:
+- Automatic post quantum encryption
+- Full path validation
+- UDP congestion control
+- UDP based hole punching
 
 ## Run
 
