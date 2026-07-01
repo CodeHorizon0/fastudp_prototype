@@ -19,9 +19,14 @@ UDP transport layer with FastAPI-like route decorators and QUIC-inspired transpo
 - Automatic post quantum encryption
 - Full path validation
 - UDP congestion control
-- UDP based hole punching
+- Session control
 
- - JWT BASED CRYPTO HANDSHAKE
+
+## Later
+
+- JWT BASED CRYPTO HANDSHAKE IN RTT0
+- Reliable & Unreliable transport mode
+- UDP based hole punching
 
 ## Run
 
