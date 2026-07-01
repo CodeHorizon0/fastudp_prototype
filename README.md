@@ -3,16 +3,16 @@
 UDP transport layer with FastAPI-like route decorators and QUIC-inspired transport features.
 
 ## Included transport features:
-- asyncio datagram transport
-- binary packets
+- Asyncio datagram transport
+- Binary packets
 - PSK handshake
 - AEAD payload protection
-- replay protection
-- stream multiplexing
-- connection migration by authenticated address rebinding
-- path validation frames
-- session resumption tickets
-- packet acknowledgments
+- Replay protection
+- Stream multiplexing
+- Connection migration by authenticated address rebinding
+- Path validation frames
+- Session resumption tickets
+- Packet acknowledgments
 - FastAPI-like route decorators
 
 ## Planned features:
