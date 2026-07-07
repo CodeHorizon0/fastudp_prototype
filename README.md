@@ -15,11 +15,13 @@ UDP transport layer with FastAPI-like route decorators and QUIC-inspired transpo
 - Packet acknowledgments
 - FastAPI-like route decorators
 
-## Planned features:
-- Automatic post quantum encryption
 - Full path validation
 - UDP congestion control
 - Session control
+
+## Planned features:
+- Automatic post quantum encryption
+
 
 
 ## Banger features
