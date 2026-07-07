@@ -49,6 +49,7 @@ from .constants import (
 )
 from .exceptions import ConnectionClosed, HandshakeError, PacketTooLarge, ProtocolError, RouteNotFound, SecurityError
 from .routing import FastUDPApp, Request, Response, TransportSessionProxy, build_handler_kwargs, normalize_response, split_path
+from .congestion import UDPCongestionController
 from .security import ReplayWindow, TokenBucket, derive_session_key, mac, now_ts, open_ticket, seal_ticket, ts_ok
 
 
@@ -122,6 +123,7 @@ class FastUDPServer(asyncio.DatagramProtocol):
         self.rate_limits: Dict[str, TokenBucket] = {}
         self._cleanup_task: Optional[asyncio.Task[None]] = None
         self._closed = False
+        self.congestion = UDPCongestionController()
         self.logger = logger or logging.getLogger("fastudp.server")
 
     def route(self, path: str, methods: Sequence[str]) -> Callable[[Callable[..., Any]], Callable[..., Any]]:

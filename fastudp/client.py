@@ -36,6 +36,7 @@ from .constants import (
 )
 from .exceptions import ConnectionClosed, HandshakeError, PacketTooLarge, ProtocolError, RequestTimeout, SecurityError
 from .routing import Response
+from .congestion import UDPCongestionController
 from .security import ReplayWindow, derive_session_key, mac, now_ts, open_ticket, seal_ticket, ts_ok
 
 
@@ -168,6 +169,7 @@ class FastUDPClient:
         self.streams: Dict[int, StreamState] = {}
         self.recv_windows: Dict[int, ReplayWindow] = {}
         self.server_addr = (host, port)
+        self.congestion = UDPCongestionController()
         self.resumption_ticket: bytes = b""
 
     async def connect(self) -> TransportSession:

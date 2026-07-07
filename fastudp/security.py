@@ -120,3 +120,7 @@ def derive_session_key(psk: bytes, client_id: str, cnonce: bytes, snonce: bytes)
     prk = hkdf_extract(snonce + cnonce, psk)
     info = b"fastudp-session|" + client_id.encode("utf-8") + b"|" + cnonce + b"|" + snonce
     return hkdf_expand(prk, info, 32)
+
+
+def derive_post_quantum_session_key(shared_secret: bytes, session_key: bytes) -> bytes:
+    return hashlib.sha256(b"fastudp-pq|" + shared_secret + session_key).digest()
